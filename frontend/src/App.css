@@ -1,0 +1,127 @@
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+.logout-button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}
+
+/* Login */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.input-field {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #555;
+}
+
+/* PostDetail */
+.post-detail {
+  padding: 20px;
+}
+
+.post-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.post-description {
+  font-size: 16px;
+  color: #666;
+}
+
+.post-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* PostLists */
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  margin: 10px 0;
+}
+
+.post-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.post-item a:hover {
+  text-decoration: underline;
+}
+
+/* Posts */
+.posts-container {
+  padding: 20px;
+}
+
+/* General */
+.content {
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.page-text {
+  font-size: 16px;
+  color: #666;
+}
