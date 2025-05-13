@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-export default function Post() {
+export default function Post({ user }) {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
@@ -52,20 +52,22 @@ export default function Post() {
 
   return (
     <div className="post-detail">
-      <div className="post-actions">
-        <button 
-          className="btn-edit"
-          onClick={() => navigate(`/posts/${slug}/edit`)}
-        >
-          Edit
-        </button>
-        <button 
-          className="btn-delete"
-          onClick={handleDelete}
-        >
-          Delete
-        </button>
-      </div>
+      {user && (
+        <div className="post-actions">
+          <button 
+            className="btn-edit"
+            onClick={() => navigate(`/posts/${slug}/edit`)}
+          >
+            Edit
+          </button>
+          <button 
+            className="btn-delete"
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
+        </div>
+      )}
       <h3 className="post-title">{post.title}</h3>
       <div className="post-meta">
         <span className="post-author">By {post.author}</span>

@@ -44,7 +44,7 @@ function AppLayout() {
         <Route path="/" element={<Home />} />
         <Route path="/posts" element={<Outlet />}>
           <Route index element={<PostLists />} />
-          <Route path=":slug" element={<Post />} />
+          <Route path=":slug" element={<Post user={user} />} />
           <Route path=":slug/edit" element={<ProtectedRoute user={user}><EditPost /></ProtectedRoute>} />
         </Route>
         <Route path="/about" element={<About />} />
