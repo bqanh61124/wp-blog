@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import PostLists from './components/PostLists';
 import Post from './components/Post';
 import NewPost from './components/NewPost';
+import EditPost from './components/EditPost';
 import Stats from './components/Stats';
 import ProtectedRoute from './components/ProtectedRoute';
 import './components/Blog.css';
@@ -44,6 +45,7 @@ function AppLayout() {
         <Route path="/posts" element={<Outlet />}>
           <Route index element={<PostLists />} />
           <Route path=":slug" element={<Post />} />
+          <Route path=":slug/edit" element={<ProtectedRoute user={user}><EditPost /></ProtectedRoute>} />
         </Route>
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login onLogin={setUser} />} />
